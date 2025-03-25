@@ -14,7 +14,7 @@ map("n", "<C-l>", "<C-w>l", opts)
 
 -- Quick Accesses
 map({"n", "i"}, "<C-a>", "<Esc>gg0vG$", opts)
-map("n", "<leader>sf", "<cmd>so<CR>", opts)
+map("n", "<leader>so", "<cmd>so<CR>", opts)
 
 -- Modes
 map("i", "jk", "<Esc>", opts)
@@ -22,6 +22,9 @@ map("i", "jk", "<Esc>", opts)
 -- Actions
 map("n", "<leader>w", "<cmd>w<CR>", opts)
 map("n", "<leader>q", "<cmd>q<CR>", opts)
+map("n", "<leader>Q", "<cmd>q!<CR>", opts)
+map("n", "<leader><C-q>", "<cmd>qa<CR>", opts)
+map("n", "<leader><C-Q>", "<cmd>qa!<CR>", opts)
 
 -- Files Navigation
 map("n", "<leader>pv", "<cmd>Ex<CR>", opts)
