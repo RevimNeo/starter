@@ -99,6 +99,14 @@ return {
 	{
 		"kdheepak/lazygit.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
-	}
+	},
 
+	{
+		'akinsho/bufferline.nvim',
+		version = "*",
+		dependencies = 'nvim-tree/nvim-web-devicons',
+		config = function ()
+			require "configs.bufferline"
+		end
+	},
 }
