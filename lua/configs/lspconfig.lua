@@ -1,3 +1,4 @@
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local on_attach = function(_,bufnr)
 	local opts = {
 		noremap = true,
@@ -30,10 +31,11 @@ require("lspconfig").lua_ls.setup({
 			},
 		},
 	},
+	capabilities = capabilities,
+	on_attach = on_attach
 })
 
 local mason_lsp = require("mason-lspconfig")
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 mason_lsp.setup({
 	ensure_installed = {
