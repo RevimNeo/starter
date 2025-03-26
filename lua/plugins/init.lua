@@ -1,5 +1,4 @@
 return {
-
 	-- Theme
 	{
 		"ellisonleao/gruvbox.nvim",
@@ -51,7 +50,8 @@ return {
 			"hrsh7th/cmp-cmdline",
 			"hrsh7th/cmp-nvim-lua",
 			"L3MON4D3/LuaSnip",
-			"saadparwaiz1/cmp_luasnip"
+			"saadparwaiz1/cmp_luasnip",
+			"rafamadriz/friendly-snippets"
 		},
 		config = function ()
 			require "configs.cmp"
