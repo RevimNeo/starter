@@ -1,14 +1,14 @@
 require('gitsigns').setup {
-  signs = {
-    add          = { text = '+' },
-    change       = { text = '~' },
-    delete       = { text = '_' },
-    topdelete    = { text = '‾' },
-    changedelete = { text = '~' },
-  },
-  numhl = true,  -- Highlight line numbers
-  linehl = false, -- Disable full-line highlights
-  watch_gitdir = { interval = 1000 },
+	signs = {
+		add          = { text = '+' },
+		change       = { text = '~' },
+		delete       = { text = '_' },
+		topdelete    = { text = '‾' },
+		changedelete = { text = '~' },
+	},
+	numhl = true,  -- Highlight line numbers
+	linehl = false, -- Disable full-line highlights
+	watch_gitdir = { interval = 1000 },
 }
 
 vim.keymap.set('n', '<leader>gs', ':Gitsigns stage_hunk<CR>')

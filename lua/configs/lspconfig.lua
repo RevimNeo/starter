@@ -1,10 +1,12 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 local on_attach = function(_,bufnr)
 	local opts = {
 		noremap = true,
 		silent = true,
 		buffer = bufnr,
 	}
+
 	local map = vim.keymap.set
 
 	map("n", "gd", vim.lsp.buf.definition, opts)
@@ -17,11 +19,13 @@ local on_attach = function(_,bufnr)
 	map("n", "]d", vim.diagnostic.goto_next, opts)
 end
 
+local lspconfig = require("lspconfig")
 local mason = require("mason")
+local mason_lsp = require("mason-lspconfig")
 
 mason.setup({})
 
-require("lspconfig").lua_ls.setup({
+lspconfig.lua_ls.setup({
 	settings = {
 		Lua = {
 			runtime = { version = "LuaJIT" },
@@ -34,8 +38,6 @@ require("lspconfig").lua_ls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach
 })
-
-local mason_lsp = require("mason-lspconfig")
 
 mason_lsp.setup({
 	ensure_installed = {

@@ -4,7 +4,7 @@ vim.opt.termguicolors = true
 -- empty setup using defaults
 require("nvim-tree").setup()
 
-local function my_on_attach(bufnr)
+local function on_attach(bufnr)
 	local api = require "nvim-tree.api"
 
 	local function opts(desc)
